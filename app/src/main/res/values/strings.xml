@@ -3,6 +3,7 @@
     <string name="one_world">One Bank</string>
     <string name="greetings">Hello Mary</string>
     <string-array name="gender">
+        <item>Select</item>
         <item>Male</item>
         <item>Female</item>
     </string-array>

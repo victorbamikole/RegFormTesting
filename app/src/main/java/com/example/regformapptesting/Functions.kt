@@ -58,19 +58,14 @@ class Functions {
     //Gender validation
 
     fun validateGender(sex: String): Boolean {
-        if (sex.isEmpty()) {
-            errorMsg = "Please select an option"
-            result = false
-        } else {
-            result = true
-        }
-        return result
+        errorMsg = "Select your gender"
+        return sex == "Male" || sex == "Female"
     }
 
     //Registration Validation function
 
-    fun validateDetails(fullName: String, mail: String, pNumber: String): Boolean {
-        result = validateName(fullName) && validateMail(mail) && validatePhoneNumber(pNumber)
+    fun validateDetails(fullName: String, mail: String, pNumber: String, gender: String): Boolean {
+        result = validateName(fullName) && validateMail(mail) && validatePhoneNumber(pNumber) && validateGender(gender)
         return result
     }
 }
