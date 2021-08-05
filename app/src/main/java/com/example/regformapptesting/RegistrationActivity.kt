@@ -22,9 +22,9 @@ class RegistrationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registration)
 
         //Instantiate the Functions class to access the class methods in this activity
-        val function: Functions = Functions()
+        val function: ValidationFunctions = ValidationFunctions()
 
-        //Assign a value to our variables bu using the find by view method
+        //Assign a value to variables bu using the find by view method
         userName = findViewById(R.id.userName)
         mail = findViewById(R.id.eMail)
         phoneNumber = findViewById(R.id.pNumber)

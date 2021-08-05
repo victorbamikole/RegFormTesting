@@ -31,11 +31,12 @@
 
 
         <TextView
+            android:textAlignment="center"
             android:id="@+id/greetings"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="160dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="170dp"
             android:elevation="40dp"
             android:gravity="center"

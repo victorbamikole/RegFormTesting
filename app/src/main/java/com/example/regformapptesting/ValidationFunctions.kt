@@ -1,6 +1,6 @@
 package com.example.regformapptesting
 
-class Functions {
+class ValidationFunctions {
 
     //Declare variables for different conditions
 
@@ -8,11 +8,13 @@ class Functions {
     private var result: Boolean = false
 
     //Name validation function
-
     fun validateName(fullName: String): Boolean {
         val nameDetails = Regex("[A-Z][a-zA-Z]{2,}(?: [A-Z][a-zA-Z]*){0,2}")
         if (fullName.isEmpty()) {
             errorMsg = "Full Name Required"
+            result = false
+        } else if (!fullName.matches(nameDetails)) {
+            errorMsg = "Invalid Name"
             result = false
         } else if (!fullName.contains(" ")) {
             errorMsg = "Full Name Required"
@@ -24,9 +26,8 @@ class Functions {
     }
 
     //Email validation function
-
     fun validateMail(mail: String): Boolean {
-        val mailAddress = Regex("[a-zA-Z0-9._*]+@[a-z]+\\.+[a-z]+")
+        val mailAddress = Regex("[a-zA-Z._*]+@[a-z]+\\.+[a-z]+")
         if (mail.isEmpty()) {
             errorMsg = "Enter valid Mail"
             result = false
@@ -40,7 +41,6 @@ class Functions {
     }
 
     //Phone number validation function
-
     fun validatePhoneNumber(pNumber: String): Boolean {
         val validNumber = Regex("(234|0)[0-9]{10}")
         if (pNumber.isEmpty()) {
@@ -55,17 +55,18 @@ class Functions {
         return result
     }
 
-    //Gender validation
-
+    //Gender validation function
     fun validateGender(sex: String): Boolean {
         errorMsg = "Select your gender"
         return sex == "Male" || sex == "Female"
     }
 
-    //Registration Validation function
-
+    //Registration Validation function to check all field is valid or invalid
     fun validateDetails(fullName: String, mail: String, pNumber: String, gender: String): Boolean {
-        result = validateName(fullName) && validateMail(mail) && validatePhoneNumber(pNumber) && validateGender(gender)
+        result =
+            validateName(fullName) && validateMail(mail) && validatePhoneNumber(pNumber) && validateGender(
+                gender
+            )
         return result
     }
 }

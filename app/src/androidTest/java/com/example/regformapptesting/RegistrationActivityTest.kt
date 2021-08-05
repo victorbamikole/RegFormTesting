@@ -23,11 +23,11 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class RegistrationActivityTest {
 
-    val fullName = "Victor Bamikole"
-    val email = "victor@gmail.com"
-    val phoneNumber = "09033017453"
+    val fullName = "Garry Aron"
+    val email = "garry@gmail.com"
+    val phoneNumber = "08057976201"
 
-    val fullName2 = " "
+    val fullName2 = " " 
     val email2 = "garry"
     val phonNumber2 = "8234567892"
 
@@ -42,8 +42,6 @@ class RegistrationActivityTest {
         Espresso.onView((withId(R.id.textView4)))
 
 
-
-
         Espresso.onView(withId(R.id.eMail))
             .perform(ViewActions.typeText(email), ViewActions.closeSoftKeyboard())
         Espresso.onView(withId(R.id.buttonReg)).perform(click())
@@ -56,6 +54,8 @@ class RegistrationActivityTest {
 
         Espresso.onView(withId(R.id.genderDropDown)).perform(click());
         onData(allOf(`is`(instanceOf(String::class.java)), `is`("Female"))).perform(click())
+
+        Espresso.onView(withId(R.id.buttonReg)).perform(click())
 
     }
 
@@ -76,24 +76,24 @@ class RegistrationActivityTest {
         Espresso.onView(withId(R.id.buttonReg)).perform(click())
     //    Espresso.onView((withId(R.id.textView4)))
 
-        Espresso.onView(withId(R.id.userName))
-            .perform(clearText())
-            .perform(ViewActions.typeText(fullName), ViewActions.closeSoftKeyboard())
-        Espresso.onView(withId(R.id.buttonReg)).perform(click())
-        Espresso.onView((withId(R.id.textView4)))
-
-
-
-
-        Espresso.onView(withId(R.id.eMail))
-            .perform(ViewActions.typeText(email), ViewActions.closeSoftKeyboard())
-        Espresso.onView(withId(R.id.buttonReg)).perform(click())
-        Espresso.onView((withId(R.id.textView4)))
-
-        Espresso.onView(withId(R.id.pNumber))
-            .perform(ViewActions.typeText(phoneNumber), ViewActions.closeSoftKeyboard())
+//        Espresso.onView(withId(R.id.userName))
+//            .perform(clearText())
+//            .perform(ViewActions.typeText(fullName), ViewActions.closeSoftKeyboard())
 //        Espresso.onView(withId(R.id.buttonReg)).perform(click())
 //        Espresso.onView((withId(R.id.textView4)))
+
+
+
+//
+//        Espresso.onView(withId(R.id.eMail))
+//            .perform(ViewActions.typeText(email), ViewActions.closeSoftKeyboard())
+//        Espresso.onView(withId(R.id.buttonReg)).perform(click())
+//        Espresso.onView((withId(R.id.textView4)))
+
+//        Espresso.onView(withId(R.id.pNumber))
+//            .perform(ViewActions.typeText(phoneNumber), ViewActions.closeSoftKeyboard())
+////        Espresso.onView(withId(R.id.buttonReg)).perform(click())
+////        Espresso.onView((withId(R.id.textView4)))
 
         Espresso.onView(withId(R.id.genderDropDown)).perform(click());
         onData(allOf(`is`(instanceOf(String::class.java)), `is`("Female"))).perform(click())

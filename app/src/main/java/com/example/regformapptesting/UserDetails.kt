@@ -18,7 +18,7 @@ class UserDetails : AppCompatActivity() {
         val gender: TextView = findViewById(R.id.textView7)
 
 
-        //Get registration information stored in variable
+        //Get registration information stored in each variable
         val name = intent.getStringExtra("Extra_name")
         val phoneNumber = intent.getStringExtra("Extra_phone_number")
         val mail = intent.getStringExtra("Extra_mail")
